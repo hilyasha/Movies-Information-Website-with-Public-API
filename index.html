@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie. | Cinematic Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="landing-page">
+        <img src="landing page.jpg" alt="Movie Landing Page" class="hero-img">
+    </header>
+
+    <section class="search-container">
+        <img src="ticket.png" class="deco-left" alt="decor">
+        <img src="clapper.png" class="deco-right" alt="decor">
+
+        <div class="search-wrapper">
+            <input type="text" id="movie-search" placeholder="Search your favorite movies...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="filter-group">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="trending">Trending</button>
+            <button class="filter-btn" data-category="popular">Popular</button>
+            <button class="filter-btn" data-category="top-rated">Top Rated</button>
+            <button class="filter-btn" data-category="upcoming">Upcoming</button>
+        </div>
+    </section>
+
+    <main class="movie-display">
+        <div id="movie-grid" class="grid-container">
+            </div>
+    </main>
+
+    <section class="category-sections">
+        <div class="category-block">
+            <h2 class="category-title">Fantasy</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn prev" onclick="moveSlider('fantasy-track', -1)">&#10094;</button>
+                <div id="fantasy-track" class="slider-container">
+                    <div class="slider-track"></div>
+                </div>
+                <button class="slide-btn next" onclick="moveSlider('fantasy-track', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <h2 class="category-title">Romance</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn prev" onclick="moveSlider('romance-track', -1)">&#10094;</button>
+                <div id="romance-track" class="slider-container">
+                    <div class="slider-track"></div>
+                </div>
+                <button class="slide-btn next" onclick="moveSlider('romance-track', 1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <h2 class="category-title">Horror</h2>
+            <div class="slider-wrapper">
+                <button class="slide-btn prev" onclick="moveSlider('horror-track', -1)">&#10094;</button>
+                <div id="horror-track" class="slider-container">
+                    <div class="slider-track"></div>
+                </div>
+                <button class="slide-btn next" onclick="moveSlider('horror-track', 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="" class="modal-img">
+            <h2 id="modal-title"></h2>
+            <p id="modal-desc"></p>
+            <p id="modal-rating"></p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Movie. | Hilya Shafwa Najla Abadi</p>
+        <p style="font-size: 0.8rem; margin-top: 5px;">Data provided by TMDB API</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
